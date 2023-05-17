@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Family Calendar</title>
+</head>
+<body>
+    <h1>Family Calendar</h1>
+
+    <form method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Appointments</h2>
+    {% for appointment in appointments %}
+        <div>
+            <h3>{{ appointment.title }}</h3>
+            <p>{{ appointment.date }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
